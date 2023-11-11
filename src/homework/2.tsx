@@ -1,5 +1,14 @@
 import React, {useReducer} from "react";
 
+type State = {
+  isRequestInProgress: boolean;
+  requestStep: string;
+};
+
+type Action = {
+  type: string;
+};
+
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: 'idle',
